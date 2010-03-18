@@ -25,7 +25,7 @@ package app
 		override protected function startApplication() : void
 		{
 			addEventListener(InitialDataServiceEvent.DATA_LOADED, initialData_loaded);	
-			m_context = new FacebookConnectContext(this);
+			m_context = new FacebookConnectContext(m_rootElement);
 		}
 
 		private function initialData_loaded(event : InitialDataServiceEvent) : void 

@@ -26,9 +26,7 @@ package app
 
 		override public function startup() : void
 		{
-			//app configuration, as close to the application entry as possible
 			commandMap.mapEvent(ContextEvent.STARTUP, ConfigCommand, ContextEvent, true);
-
 			commandMap.mapEvent(ContextEvent.STARTUP, PrepModelCommand, ContextEvent, true);
 			commandMap.mapEvent(ContextEvent.STARTUP, PrepControllerCommand, ContextEvent, true);
 			commandMap.mapEvent(ContextEvent.STARTUP, PrepServicesCommand, ContextEvent, true);

@@ -1,6 +1,7 @@
 package app.view.mediators
 {
-	import app.events.URIEvent;
+	import app.events.fb.FBConnectEvent;
+	import app.models.fb.FBModel;
 	import app.view.ApplicationView;
 
 	import org.robotlegs.mvcs.Mediator;
@@ -11,6 +12,7 @@ package app.view.mediators
 		 *								public properties										   *
 		 *******************************************************************************************/
 		[Inject] public var applicationView : ApplicationView;
+		[Inject] public var fbModel : FBModel;
 
 
 		/*******************************************************************************************
@@ -28,16 +30,17 @@ package app.view.mediators
 
 		override public function onRegister() : void
 		{
-			eventMap.mapListener(eventDispatcher, URIEvent.URI_CHANGED, uri_changed);
+			eventMap.mapListener(eventDispatcher, FBConnectEvent.FB_CONNECT_SUCCESS, login_success);
 		}
-		
 
+		private function login_success(event : FBConnectEvent) : void 
+		{
+			applicationView.setUserData(fbModel.getUserData());
+		}
+
+		
 		/*******************************************************************************************
 		 *								protected/ private methods							     *
 		 *******************************************************************************************/
-		private function uri_changed(event : URIEvent) : void 
-		{
-			
-		}
 	}
 }

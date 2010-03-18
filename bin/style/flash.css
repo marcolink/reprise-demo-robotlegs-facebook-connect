@@ -36,3 +36,21 @@
 	color: #eee;
 	background-gradient: linear 90 colors(#ccc #bbb) ratios(0 255);
 }
+
+#nameLabel
+{
+	opacity: .1;
+	color: #666;
+	font-weight: bold;
+	font-size: 24px;
+	margin: auto;
+	margin-top: 100px;
+	-reprise-transition: opacity;
+	left: 0;
+	right: 0;
+}
+
+#nameLabel.show
+{
+	opacity: 1;
+}
