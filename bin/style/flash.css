@@ -1,0 +1,38 @@
+.display
+{
+	background-gradient: linear 90 colors(#eee #ddd) ratios(0 255);
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	padding: 30px;
+	margin: auto;
+	left: 0;
+	right: 0;
+	
+}
+
+#loginView
+{
+	margin-top: 50px;
+	width: 100px;
+}
+
+#loginView LabelButton
+{
+	color: #999;
+	font-weight: bold;
+	text-align: center;
+	padding: 5px;
+	background-gradient: linear 90 colors(#ddd #ccc) ratios(0 255);
+	border-radius: 4px;
+	border: 1px solid #aaa;	
+	margin: 10px 0 0 0;
+	selectable : false;
+	cursor: pointer;
+	-reprise-transition: background-gradient .75s easeOutQuint, color;
+	
+}
+#loginView LabelButton:hover
+{
+	color: #eee;
+	background-gradient: linear 90 colors(#ccc #bbb) ratios(0 255);
+}
